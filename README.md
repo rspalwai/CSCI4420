@@ -26,9 +26,11 @@ python truth_tree.py "formula1, formula2, ..."
 
 ## EXAMPLE
 Input: 
+```
 "A <-> (B ∨ (C & D)), ~D, E -> F, E, G ∨ H, ~G, I -> J, J -> K, ~K"
-
+```
 Output:
+```
 F, ~D, (I -> J), (J -> K), E, (A -> (B | (C & D))), H, (G | H), (E -> F), ~K, ((B | (C & D)) -> A), ~G
 ├─
 │  F, ~D, (J -> K), ~I, E, (A -> (B | (C & D))), H, (G | H), (E -> F), ~K, ((B | (C & D)) -> A), ~G
@@ -60,3 +62,4 @@ F, ~D, (I -> J), (J -> K), E, (A -> (B | (C & D))), H, (G | H), (E -> F), ~K, ((
 │  │           ~D, C, D, ~I, ~G, E, H, (G | H), ~J, (C & D), F, ~K, ((B | (C & D)) -> A), A (closed)
 │     ~D, (E -> F), ~I, K, E, (A -> (B | (C & D))), H, (G | H), F, ~K, ((B | (C & D)) -> A), ~G (closed)
    F, ~D, J, (J -> K), K, E, (A -> (B | (C & D))), H, (G | H), (E -> F), ~K, ((B | (C & D)) -> A), ~G (closed)
+```
